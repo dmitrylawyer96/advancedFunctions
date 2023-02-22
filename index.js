@@ -114,6 +114,7 @@ const movies = [
 // // 1
 // // BOOM!*
 
+
 function detonatorTimer(delay) {
   // тут ваш код*	
     let countDown = delay;
@@ -129,6 +130,17 @@ function detonatorTimer(delay) {
   }
 
   detonatorTimer(3);
+
+
+function detonatorTimer(delay) {
+console.log(delay--);
+if (!delay){
+      return setTimeout(() => console.log('BOOM!'), 1000)
+}
+return setTimeout(detonatorTimer, 1000, delay)
+}
+
+detonatorTimer(3);
 
 
 // № 5. Напишіть об'єкт в якому опишіть свої довільні властивості та довільні методи (2-3 штуки) що ці властивості виводять. Наприклад:
